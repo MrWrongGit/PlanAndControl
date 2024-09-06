@@ -143,18 +143,3 @@ plt.cla()
 showPath(map, target)
 plt.imshow(map)
 plt.show()
-
-#####################################
-'''
-0. set all non-obstacle node's distance to max
-1. find 8 neighbors
-2. calculate my distance to each neighbor -> got neighbor to start distance
-3. update neighbor's distance to start if it's smaller than current distance
-4. at the same time, update neighbor's parent to me because neighbor is closer to start node through me
-5. mark me as visited, so I won't be visited again
-6. now, find the node which is closest to start and not visited
-7. repeat 1-6 until all nodes are visited (osbstacle nodes)
-8. now, the target node has the shortest path to start node, iterate target's parent until start node is the shortest path we need
-
-Dijkstra is not efficient for this task, because it has no goal, use A* instead!
-'''
